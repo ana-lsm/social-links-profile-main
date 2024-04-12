@@ -1,0 +1,117 @@
+:root {
+    --clr-primary: hsl(75, 94%, 57%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsl(0, 0%, 20%);
+    --clr-neutral-700: hsl(0, 0%, 12%);
+    --clr-neutral-900: hsl(0, 0%, 8%);
+
+
+    --ff-base: "Inter", sans-serif;
+
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--clr-neutral-900);
+    font-family: var(--ff-base);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-100);
+    display: grid;
+    place-content: center;
+    
+}
+
+main {
+    width: 350px;
+    background-color: var(--clr-neutral-700);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;       
+}
+
+@media (max-width: 375px) {
+    body, main {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 0.625rem;  
+}
+
+header .name {
+    font-weight: var(--fw-semi-bold);
+    font-size: 1.5rem;  
+}
+
+header .address {
+    color: var(--clr-primary);
+    font-weight: var(--fw-bold);
+    margin-bottom: 0.625rem;
+}
+
+header .quote {
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--clr-neutral-400);
+    padding: 1.30rem 2rem;
+    text-align: center;
+    line-height: 0.1rem;
+    
+}
+
+.social-links a:hover {
+    background-color: var(--clr-primary);
+    cursor: pointer;
+    color: var(--clr-neutral-900);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1rem;
+    
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
